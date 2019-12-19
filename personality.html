@@ -5,6 +5,12 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<!--CSS，加載在 head 之前-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ 
+<!--JavaScript，加載在 body 之前-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<head>
 		<title>Future Imperfect by HTML5 UP</title>
 		<meta charset="utf-8" />
@@ -472,7 +478,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									<li>
 										<article>
 											<header>
-												<h2><a href="picture_push.html">發表</a></h2>
+												<h2><a href=" " class="button fit" data-toggle="modal" data-target="#exampleModalCenter">發表</a></h2>
 											</header>
 										</article>
 									</li>
@@ -551,8 +557,26 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</section>
 
 					</section>
-
 			</div>
+
+			<!-- Modal -->
+  			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    			<div class="modal-dialog modal-dialog-centered" role="document">
+     			 <div class="modal-content">
+       			 <div class="modal-header">
+        			 
+        			</div>
+        			<div class="modal-body">
+						<a href="picture_push.html"><img style="padding:0px 28px;" src="./images/icon_photo.png"/>圖片</a>
+						<a href="#"><img style="padding:0px 28px;" src="./images/icon_text.png"/>文字</a>
+						<a href="#"><img style="padding:0px 28px;" src="./images/icon_video.png"/>影音</a>
+        			</div>
+        			<div class="modal-footer">
+         			 <button type="button" class="button small" data-dismiss="modal">Close</button>
+        			</div>
+      			</div>
+    			</div>
+  			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -560,6 +584,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				$('#myModal').on('shown.bs.modal', function () {
+		  			$('#myInput').trigger('focus')
+				})
+			</script>
 
 	</body>
 </html>
