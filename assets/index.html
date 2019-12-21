@@ -114,9 +114,9 @@
 										<li><a href="single.html" class="button large">Continue Reading</a></li>
 									</ul>
 									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><div class="like_button"><button class="icon solid fa-heart"  value="28" id="like1"><span class="count">28</span></button></div class="like_button"></li>
+										<li><div class="like_button"><button><a class="icon solid fa-heart"  id="like1"><span class="count">28</span></a></button></div class="like_button"></li>
 										<li><a href="#" class="icon solid fa-comment">128</a></li>
+										<li><a href="#">Report</a></li>
 									</ul>
 								</footer>
 							</article>
@@ -140,9 +140,9 @@
 										<li><a href="single.html" class="button large">Continue Reading</a></li>
 									</ul>
 									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="#" class="icon solid fa-comment">128</a></li>
+										<li><div class="like_button2"><button><a class="icon solid fa-heart" id="like2"><span class="count2">42</span></a></button></div class="like_button"></li>
+										<li><a href="#" class="icon solid fa-comment">13</a></li>
+										<li><a href="#">Report</a></li>
 									</ul>
 								</footer>
 							</article>
@@ -159,16 +159,16 @@
 										<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
-								<a href="single.html" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+								<a href="single.html" class="image featured"><img src="../images/pic03.jpg" alt="" /></a>
 								<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.</p>
 								<footer>
 									<ul class="actions">
 										<li><a href="single.html" class="button large">Continue Reading</a></li>
 									</ul>
 									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="#" class="icon solid fa-comment">128</a></li>
+										<li><div class="like_button3"><button><a class="icon solid fa-heart" id="like3"><span class="count3">96</span></a></button></div class="like_button"></li>
+										<li><a href="#" class="icon solid fa-comment">104</a></li>
+										<li><a href="#">Report</a></li>
 									</ul>
 								</footer>
 							</article>
@@ -635,21 +635,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="js/breakpoints.min.js"></script>
 			<script src="js/util.js"></script>
 			<script src="js/main.js"></script>
-			<script>
-				var is_click = 0;
-					$(".like_button button").on("click", function() {
-					  var $count = $(this).parent().find('.count');
-					  if(!is_click){
-						  $count.html($count.html() * 1 + 1);
-						  is_click += 1;
-					  }
-					  else{
-						$count.html($count.html() * 1 - 1);
-						is_click = 0;
-					  }
-				});
-				
-			</script>
-
+			<script src="js/click_like.js"></script>
 	</body>
 </html>
