@@ -1,0 +1,227 @@
+const Koa = require('koa');
+const Router = require('koa-router');
+var fs = require('fs');
+const bodyParser = require('koa-bodyparser');
+const mongoose = require('mongoose');
+const position = 'D:/Github_connect/Big_pieapple_software'
+const app = new Koa();
+const router = new Router();
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/mydb";
+
+MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    console.log("Database created!");
+  });
+
+app.use(bodyParser());
+
+router.get("/", async (ctx, next) => {
+    console.log("-----------------");
+    console.log("Rsponse main page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/login.html`);
+});
+router.post("/check", async (ctx, next) => {
+    console.log("resive login data");
+    ctx.type = "html";
+    var content = ctx.request.rawBody;
+    console.log(content);
+    if(content == 'user_name=admin&password=password'){
+        ctx.body = fs.createReadStream(`${position}/view/index.html`);
+    }
+    else{
+        ctx.body = fs.createReadStream(`${position}/view/login.html`);
+    }
+});
+router.get("/index", async (ctx, next) => {
+    console.log("Rsponse login page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/index.html`);
+});
+router.get("/personality", async (ctx, next) => {
+    console.log("Rsponse personality page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/personality.html`);
+});
+
+//css
+router.get("/main.css", async (ctx, next) => {
+    console.log("Rsponse main css");
+    ctx.type = "css";
+    ctx.body = fs.createReadStream(`${position}/static/css/main_2.css`);
+});
+router.get("/fontawesome-all-min.css", async (ctx, next) => {
+    console.log("Rsponse fontawesome-all-min.css");
+    ctx.type = "css";
+    ctx.body = fs.createReadStream(`${position}/static/css/fontawesome-all-min.css`);
+});
+router.get("/login_table.css", async (ctx, next) => {
+    console.log("Rsponse login_table.css");
+    ctx.type = "css";
+    ctx.body = fs.createReadStream(`${position}/static/css/login_table.css`);
+});
+router.get("/all.css", async (ctx, next) => {
+    console.log("Rsponse all.css");
+    ctx.type = "css";
+    ctx.body = fs.createReadStream(`${position}/static/css/all.css`);
+});
+
+
+//images
+router.get("/avatar.jpg", async (ctx, next) => {
+    console.log("Rsponse avatar pic");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/avatar.jpg`);
+});
+router.get("/whethering_cover.jpg", async (ctx, next) => {
+    console.log("Rsponse weather pic");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/whethering_cover.jpg`);
+});
+router.get("/logo.jpg", async (ctx, next) => {
+    console.log("Rsponse logo.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/logo.jpg`);
+});
+router.get("/pic02.jpg", async (ctx, next) => {
+    console.log("Rsponse pic02.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic02.jpg`);
+});
+router.get("/pic03.jpg", async (ctx, next) => {
+    console.log("Rsponse pic03.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic03.jpg`);
+});
+router.get("/pic04.jpg", async (ctx, next) => {
+    console.log("Rsponse pic04.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic04.jpg`);
+});
+router.get("/pic05.jpg", async (ctx, next) => {
+    console.log("Rsponse pic05.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic05.jpg`);
+});
+router.get("/pic06.jpg", async (ctx, next) => {
+    console.log("Rsponse pic06.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic06.jpg`);
+});
+router.get("/pic07.jpg", async (ctx, next) => {
+    console.log("Rsponse pic07.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic07.jpg`);
+});
+router.get("/pic08.jpg", async (ctx, next) => {
+    console.log("Rsponse pic08.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic08.jpg`);
+});
+router.get("/pic09.jpg", async (ctx, next) => {
+    console.log("Rsponse pic09.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic09.jpg`);
+});
+router.get("/pic10.jpg", async (ctx, next) => {
+    console.log("Rsponse pic10.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic10.jpg`);
+});
+router.get("/pic11.jpg", async (ctx, next) => {
+    console.log("Rsponse pic11.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic11.jpg`);
+});
+router.get("/pic12.jpg", async (ctx, next) => {
+    console.log("Rsponse pic12.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/pic12.jpg`);
+});
+
+//icon
+router.get("/fa-brands-400.eot", async (ctx, next) => {
+    console.log("Rsponse fa-brands-400.eot");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/webfonts/fa-brands-400.eot`);
+});
+router.get("/fa-regular-400.woff", async (ctx, next) => {
+    console.log("Rsponse fa-regular-400.woff");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/webfonts/fa-regular-400.woff`);
+});
+router.get("/fa-brands-400.woff2", async (ctx, next) => {
+    console.log("Rsponse fa-brands-400.woff2");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/webfonts/fa-brands-400.woff2`);
+});
+router.get("/fa-regular-400.ttf", async (ctx, next) => {
+    console.log("Rsponse fa-regular-400.ttf");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/webfonts/fa-regular-400.ttf`);
+});
+router.get("/fa-solid-900.eot", async (ctx, next) => {
+    console.log("Rsponse fa-solid-900.eot");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/webfonts/fa-solid-900.eot`);
+});
+router.get("/fa-solid-900.woff", async (ctx, next) => {
+    console.log("Rsponse fa-solid-900.woff");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/webfonts/fa-solid-900.woff`);
+});
+router.get("/fa-solid-900.ttf", async (ctx, next) => {
+    console.log("Rsponse fa-solid-900.ttf");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/webfonts/fa-solid-900.ttf`);
+});
+
+
+//script
+router.get("/jquery.min.js", async (ctx, next) => {
+    console.log("Rsponse jquery.min.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/jquery.min.js`);
+});
+router.get("/browser.min.js", async (ctx, next) => {
+    console.log("Rsponse browser.min.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/browser.min.js`);
+});
+router.get("/breakpoints.min.js", async (ctx, next) => {
+    console.log("Rsponse breakpoints.min.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/breakpoints.min.js`);
+});
+router.get("/util.js", async (ctx, next) => {
+    console.log("Rsponse util.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/util.js`);
+});
+router.get("/main.js", async (ctx, next) => {
+    console.log("Rsponse main.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/main.js`);
+});
+router.get("/click_like.js", async (ctx, next) => {
+    console.log("Rsponse click_like.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/click_like.js`);
+});
+
+
+// 静態資源
+/*app.use(convert(koaStatic(
+    path.join(__dirname , './static')
+)))*/
+
+/*mongoose.Promise = global.Promise;
+mongoose.connect(config.database);*/
+
+// 初始化路由中間層
+//app.use(routers.routes()).use(routers.allowedMethods())
+app.use(router.routes()).use(router.allowedMethods());
+app.listen(3003);
+console.log('The server is on prot 3003')
