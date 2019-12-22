@@ -104,18 +104,18 @@
 	
 						<!-- Post -->
 							<article class="post">
-                                <form action="/somewhere/to/upload" enctype="multipart/form-data">
+                                <form action="http://localhost:3001/upload" method="post" enctype="multipart/form-data">
 								<header>
 									<div class="image featured">
                                         <!--選擇圖檔(自訂格式)-->
-                                        <input type="file" onchange = "readURL(this)" targetid = "preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/><br>
+                                        <input type="file" name="file" onchange = "readURL(this)" targetid = "preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/><br>
 									</div>
                                 </header>
                                 <h3>預覽：</h3>
 								<img class="image featured" id="preview_progressbarTW_img" src="#" /><br>
 								<footer>
 									<ul class="actions">
-										<li><input type="submit" name="submit" id="submit"/></li>
+										<li><input type="submit" name="submit" id="submit" value="upload"/></li>
 									</ul>
                                 </footer>
                                 </form>
