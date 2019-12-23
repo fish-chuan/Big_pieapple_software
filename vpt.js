@@ -1,11 +1,12 @@
 const Koa = require('koa');
 const fs = require('fs');
 const path = require('path');
-const router = require('koa-router')();
+const Router = require('koa-router');
 const koaBody = require('koa-body');
 const static = require('koa-static');
-
+const position = 'D:/Github_connect/Big_pieapple_software'
 const app = new Koa();
+const router = new Router();
 
 app.use(koaBody({
   multipart: true, // 支援檔案上傳
@@ -29,8 +30,12 @@ router.get('/', (ctx) => {
   else if(pathUr1) {
     ctx.body = fs.createReadStream(pathUrl);
   }
-  
 });
+
+router.get("/main.css", async(ctx, next) => {
+  ctx.type = "css";
+  ctx.body = fs.createReadStream(`${position}/static/css/main_2.css`);
+})
 
 // 上傳檔案
 router.post('/upload', (ctx) => {
@@ -57,20 +62,23 @@ router.post('/upload', (ctx) => {
         throw new Error(err);
       } else {
         fileReader.pipe(writeStream);
-        ctx.body = {
+        ctx.body = fs.createReadStream(`${position}/view/login.html`);
+        /*ctx.body = {
           url: uploadUrl + `/${file.name}`,
           code: 0,
           message: '上傳成功'
-        };
+        };*/
       }
     });
   } else {
     fileReader.pipe(writeStream);
-    ctx.body = {
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/upload_success.html`);
+    /*ctx.body = {
       url: uploadUrl + `/${file.name}`,
       code: 0,
       message: '上傳成功'
-    };
+    };*/
   }
 });
 

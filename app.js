@@ -28,7 +28,7 @@ router.post("/check", async (ctx, next) => {
     ctx.type = "html";
     var content = ctx.request.rawBody;
     console.log(content);
-    if(content == 'user_name=admin&password=password'){
+    if(content == 'user_name=admin&password=password'||content == 'user_name=user&password=qwer'  ){
         ctx.body = fs.createReadStream(`${position}/view/index.html`);
     }
     else{
