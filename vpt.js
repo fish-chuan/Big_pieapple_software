@@ -21,8 +21,8 @@ router.get('/', (ctx) => {
   // 設定頭型別, 如果不設定，會直接下載該頁面
   ctx.type = 'html';
   // 讀取檔案
-  const pathUrl = path.join(__dirname, '../video_push.html');
-  const pathUr2 = path.join(__dirname, '../picture_push.html');
+  const pathUrl = path.join(__dirname, 'view/video_push.html');
+  const pathUr2 = path.join(__dirname, 'view/picture_push.html');
   if(pathUr2) {
     ctx.body = fs.createReadStream(pathUr2);
   }
@@ -41,7 +41,7 @@ router.post('/upload', (ctx) => {
   const fileReader = fs.createReadStream(file.path);
   console.log(fileReader);
 
-  const filePath = path.join(__dirname, '../everything_push');
+  const filePath = path.join(__dirname, '/everything_push');
   
   // 組裝成絕對路徑
   const fileResource = filePath + `/${file.name}`;

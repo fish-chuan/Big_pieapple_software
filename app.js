@@ -2,18 +2,18 @@ const Koa = require('koa');
 const Router = require('koa-router');
 var fs = require('fs');
 const bodyParser = require('koa-bodyparser');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const position = 'D:/Github_connect/Big_pieapple_software'
 const app = new Koa();
 const router = new Router();
 
-var MongoClient = require('mongodb').MongoClient;
+/*var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/mydb";
 
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     console.log("Database created!");
-  });
+  });*/
 
 app.use(bodyParser());
 
@@ -45,6 +45,22 @@ router.get("/personality", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/personality.html`);
 });
+router.get("/picture_push", async (ctx, next) => {
+    console.log("Rsponse picture_push page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/picture_push.html`);
+});
+router.get("/video_push", async (ctx, next) => {
+    console.log("Rsponse video_push page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/video_push.html`);
+});
+router.get("/text_push", async (ctx, next) => {
+    console.log("Rsponse text_push page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/text_push.html`);
+});
+
 
 //css
 router.get("/main.css", async (ctx, next) => {
@@ -139,6 +155,21 @@ router.get("/pic12.jpg", async (ctx, next) => {
     console.log("Rsponse pic12.jpg");
     ctx.type = "jpg";
     ctx.body = fs.createReadStream(`${position}/static/images/pic12.jpg`);
+});
+router.get("/icon_photo.png", async (ctx, next) => {
+    console.log("Rsponse icon_photo.png");
+    ctx.type = "png";
+    ctx.body = fs.createReadStream(`${position}/static/images/icon_photo.png`);
+});
+router.get("/icon_text.png", async (ctx, next) => {
+    console.log("Rsponse icon_text.png");
+    ctx.type = "png";
+    ctx.body = fs.createReadStream(`${position}/static/images/icon_text.png`);
+});
+router.get("/icon_video.png", async (ctx, next) => {
+    console.log("Rsponse icon_video.png");
+    ctx.type = "png";
+    ctx.body = fs.createReadStream(`${position}/static/images/icon_video.png`);
 });
 
 //icon
