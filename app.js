@@ -63,7 +63,7 @@ router.get("/text_push", async (ctx, next) => {
 router.get("/activity", async (ctx, next) => {
     console.log("Rsponse activity page");
     ctx.type = "html";
-    ctx.body = fs.createReadStream(`${position}/view/acticity.html`);
+    ctx.body = fs.createReadStream(`${position}/view/activity.html`);
 });
 
 
@@ -246,7 +246,16 @@ router.get("/click_like.js", async (ctx, next) => {
     ctx.type = "js";
     ctx.body = fs.createReadStream(`${position}/static/js/click_like.js`);
 });
-
+router.get("/showmore.js", async (ctx, next) => {
+    console.log("Rsponse showmore.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/showmore.js`);
+});
+router.get("/picslideshow.js", async (ctx, next) => {
+    console.log("Rsponse picslideshow.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/picslideshow.js`);
+});
 
 // 静態資源
 /*app.use(convert(koaStatic(
