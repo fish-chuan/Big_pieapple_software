@@ -60,12 +60,16 @@ router.get("/text_push", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/text_push.html`);
 });
+router.get("/fans", async (ctx, next) => {
+    console.log("Rsponse fans page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/fans.html`);
+});
 router.get("/activity", async (ctx, next) => {
     console.log("Rsponse activity page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/acticity.html`);
 });
-
 
 //css
 router.get("/main.css", async (ctx, next) => {
