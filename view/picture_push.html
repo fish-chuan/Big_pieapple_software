@@ -86,16 +86,17 @@
                   if(input.files && input.files[0]){
 
                     let imageTagID = input.getAttribute("targetID");
-                    let reader = new FileReader();
+                    let reader = new FileReader();//讀取檔案
 
                     reader.onload = function (e) {
 
-                       var img = document.getElementById(imageTagID);
+                       var img = document.getElementById(imageTagID);//查找特定元素(imageTagID)
                 
-                       img.setAttribute("src", e.target.result)
+                       img.setAttribute("src", e.target.result)//圖像的解析路徑(到預覽的src)
                 
-                    }
-                    reader.readAsDataURL(input.files[0]);
+					}
+					//讀出來的會是一個接近二進位檔案，所以可以直接給<img>
+                    reader.readAsDataURL(input.files[0]);//因為單選的關係，所以有檔案一定是在第0個
                   }
                 }
             </script>
