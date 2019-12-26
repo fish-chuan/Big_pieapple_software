@@ -305,6 +305,11 @@ router.get("/alert.js", async (ctx, next) => {
     ctx.type = "js";
     ctx.body = fs.createReadStream(`${position}/static/js/alert.js`);
 });
+router.get("/chat.js", async (ctx, next) => {
+    console.log("Rsponse chat.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/chat.js`);
+});
 
 // 静態資源
 /*app.use(convert(koaStatic(
