@@ -65,6 +65,16 @@ router.get("/fans", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/fans.html`);
 });
+router.get("/introduction", async (ctx, next) => {
+    console.log("Rsponse introduction page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/introduction.html`);
+});
+router.get("/introduction_sucess", async (ctx, next) => {
+    console.log("Rsponse introduction_sucess page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/introduction_sucess.html`);
+});
 router.get("/activity", async (ctx, next) => {
     console.log("Rsponse activity page");
     ctx.type = "html";
