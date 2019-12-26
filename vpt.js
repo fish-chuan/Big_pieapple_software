@@ -1,9 +1,9 @@
 const Koa = require('koa');
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs');//流的功能，例如fs.createWriteStream 或 fs.createReadStream 
+const path = require('path');//解析目錄
 const Router = require('koa-router');
-const koaBody = require('koa-body');
-const static = require('koa-static');
+const koaBody = require('koa-body');//解析post請求、支援上傳檔案的功能
+const static = require('koa-static');//解析靜態目錄資源
 const position = 'D:/Github_connect/Big_pieapple_software'
 const app = new Koa();
 const router = new Router();
@@ -24,16 +24,15 @@ router.get('/', (ctx) => {
   // 讀取檔案
   const pathUrl = path.join(__dirname, 'view/video_push.html');
   const pathUr2 = path.join(__dirname, 'view/picture_push.html');
-  const pathUr3 = path.join(__dirname, 'view/text_push.html');
   if(pathUr2) {
-    ctx.body = fs.createReadStream(pathUr2);
+    ctx.body = fs.createReadStream(pathUr2);//讀picture
   }
   else if(pathUr1) {
-    ctx.body = fs.createReadStream(pathUrl);
+    ctx.body = fs.createReadStream(pathUrl);//讀video
   }
 });
 
-router.get("/main.css", async(ctx, next) => {
+router.get("/main.css", async(ctx, next) => { //頁面框架
   ctx.type = "css";
   ctx.body = fs.createReadStream(`${position}/static/css/main_2.css`);
 })
@@ -42,7 +41,7 @@ router.get("/main.css", async(ctx, next) => {
 router.post('/upload', (ctx) => {
 
   const file = ctx.request.files.file;
-  console.log(file);
+  console.log(file);//消息(file)輸出
   // 讀取檔案流
   const fileReader = fs.createReadStream(file.path);
   console.log(fileReader);
@@ -56,12 +55,13 @@ router.post('/upload', (ctx) => {
    使用 createWriteStream 寫入資料，然後使用管道流pipe拼接
   */
   const writeStream = fs.createWriteStream(fileResource);
-  // 判斷 /static/upload 資料夾是否存在，如果不在的話就建立一個
+  // 判斷 /everything_push 資料夾是否存在，如果不在的話就建立一個
   if (!fs.existsSync(filePath)) {
-    fs.mkdir(filePath, (err) => {
+    fs.mkdir(filePath, (err) => {  //不在
       if (err) {
         throw new Error(err);
-      } else {
+      } 
+      else {
         fileReader.pipe(writeStream);
         ctx.body = fs.createReadStream(`${position}/view/login.html`);
         /*ctx.body = {
@@ -71,7 +71,8 @@ router.post('/upload', (ctx) => {
         };*/
       }
     });
-  } else {
+  } 
+  else {  //在
     fileReader.pipe(writeStream);
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/upload_success.html`);

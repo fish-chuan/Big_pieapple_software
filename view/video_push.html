@@ -68,7 +68,8 @@
                             </video>
                             <footer>
                                 <ul class="actions">
-                                    <li><input type="submit" name="submit" id="submit" value="upload"/></li>
+									<li><input type="submit" name="submit" id="submit" value="upload"/></li>
+									<li><input type="button" value="discard"  onclick="location.href='discard_v'"/></li>
                                 </ul>
                             </footer>
                             </form>
@@ -83,11 +84,6 @@
 			<script src="breakpoints.min.js"></script>
 			<script src="util.js"></script>
 			<script src="main.js"></script>
-			<script>
-				$('#myModal').on('shown.bs.modal', function () {
-		  			$('#myInput').trigger('focus')
-				})
-            </script>
             <script>
                 function readURL(input){
                 

@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
-	<!--CSS，加載在 head 之前-->
+	<!--CSS，加載在 head 之前(modal)-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
  
-<!--JavaScript，加載在 body 之前-->
+<!--JavaScript，加載在 body 之前(modal)-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <head>
@@ -96,11 +96,11 @@
 					</section>
 			</div>
 
-			<!-- Modal -->
-  			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    			<div class="modal-dialog modal-dialog-centered" role="document">
+			<!-- Modal 動態視窗-->
+  			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"><!--fade 淡入淡出-->
+    			<div class="modal-dialog modal-dialog-centered" role="document"><!--.modal-dialog-centered 到 .modal-dialog 來使互動視窗垂直置中-->
      			 <div class="modal-content">
-       			 <div class="modal-header">
+       			 	<div class="modal-header">
         			 
         			</div>
         			<div class="modal-body">
@@ -121,7 +121,7 @@
 			<script src="breakpoints.min.js"></script>
 			<script src="util.js"></script>
 			<script src="main.js"></script>
-			<script>
+			<script>  //modal運行
 				$('#myModal').on('shown.bs.modal', function () {
 		  			$('#myInput').trigger('focus')
 				})

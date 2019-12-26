@@ -75,6 +75,26 @@ router.get("/introduction_sucess", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/introduction_sucess.html`);
 });
+router.get("/discard", async (ctx, next) => {
+    console.log("Rsponse discard page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/discard.html`);
+});
+router.get("/discard_t", async (ctx, next) => {
+    console.log("Rsponse discard_t page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/discard_t.html`);
+});
+router.get("/discard_p", async (ctx, next) => {
+    console.log("Rsponse discard_p page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/discard_p.html`);
+});
+router.get("/discard_v", async (ctx, next) => {
+    console.log("Rsponse discard_v page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/discard_v.html`);
+});
 router.get("/activity", async (ctx, next) => {
     console.log("Rsponse activity page");
     ctx.type = "html";

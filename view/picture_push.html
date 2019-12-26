@@ -15,7 +15,7 @@
 				<!-- Header -->
 					<header id="header">
 						<h1><a href="index">萍水相逢</a></h1>
-						<nav class="links">
+						<nav class="links"><!--導航菜單-->
 							<ul>
 								<li><a href="activity">活動</a></li>
 								<li><a href="chatroom">聊天室</a></li>
@@ -53,7 +53,7 @@
 								</header>
 	
 						<!-- Post -->
-							<article class="post">
+							<article class="post"><!-- <article> 可獨立分配的或可重複用的结構，例如貼文-->
                                 <form action="http://localhost:3001/upload" method="post" enctype="multipart/form-data">
 								<header>
 									<div class="image featured">
@@ -66,6 +66,7 @@
 								<footer>
 									<ul class="actions">
 										<li><input type="submit" name="submit" id="submit" value="upload"/></li>
+										<li><input type="button" value="discard"  onclick="location.href='discard_p'"/></li>
 									</ul>
                                 </footer>
                                 </form>
