@@ -18,21 +18,15 @@
   },
   "homepage": "https://github.com/fish-chaun/Big_pieapple_software#readme",
   "dependencies": {
-<<<<<<< HEAD
     "fs": "0.0.1-security",
-=======
     "express": "^4.17.1",
->>>>>>> 447b803d0abc14304402e6e2dbbedddd37975264
     "koa": "^2.11.0",
     "koa-body": "^4.1.1",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "mongoose": "^5.8.2",
-<<<<<<< HEAD
     "path": "^0.12.7"
-=======
     "socket.io": "^2.3.0"
->>>>>>> 447b803d0abc14304402e6e2dbbedddd37975264
   }
 }
