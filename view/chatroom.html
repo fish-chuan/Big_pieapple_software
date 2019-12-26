@@ -170,7 +170,7 @@
                         socket.on("online", function (amount) {
                             online.innerText = amount;
                         });
-                        //顯示歷史紀錄
+                        //顯示歷史聊天紀錄
                         socket.on("msg", function (d) {
                             var msgBox = document.createElement("div")
                                 msgBox.className = "msg";
@@ -184,7 +184,7 @@
                             msgBox.appendChild(msg);
                             content.appendChild(msgBox);
                         });
-            
+                        //聊天內容輸入
                         sendForm.addEventListener("submit", function (e) {
                             e.preventDefault();
             
