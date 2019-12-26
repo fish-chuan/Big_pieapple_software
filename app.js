@@ -85,6 +85,16 @@ router.get("/activity_old", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_old.html`);
 });
+router.get("/activity_coming", async (ctx, next) => {
+    console.log("Rsponse activity_coming page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_coming.html`);
+});
+router.get("/activity_manager_application", async (ctx, next) => {
+    console.log("Rsponse activity_manager_application page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_manager_application.html`);
+});
 router.get("/upload1", async (ctx, next) => {
     console.log("Rsponse upload page");
     ctx.type = "html";
@@ -299,6 +309,11 @@ router.get("/picslideshow.js", async (ctx, next) => {
     console.log("Rsponse picslideshow.js");
     ctx.type = "js";
     ctx.body = fs.createReadStream(`${position}/static/js/picslideshow.js`);
+});
+router.get("/alert.js", async (ctx, next) => {
+    console.log("Rsponse alert.js");
+    ctx.type = "js";
+    ctx.body = fs.createReadStream(`${position}/static/js/alert.js`);
 });
 
 // 静態資源
