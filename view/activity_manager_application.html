@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<!--CSS，加載在 head 之前-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ 
+<!--JavaScript，加載在 body 之前-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<head>
+	<title>Future Imperfect by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index">萍水相逢</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="activity">活動</a></li>
+							<li><a href="chatroom">聊天室</a></li>
+							<li><a href="personality">個人主頁</a></li>
+						</ul>
+					</nav>
+					<nav class="main">
+						<ul>
+							<li class="search">
+								<a class="fa-search" href="#search">Search</a>
+								<form id="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</li>
+							<li class="menu">
+								<a class="fa-bars" href="#menu">Menu</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			    <!-- Menu -->
+				    <section id="menu">
+
+					<!-- Actions -->
+						<section>
+							<ul class="actions stacked">
+								<li><input type="button" onclick="removeElement()" value="禁止顯示18+作品" /></li>
+							</ul>
+							<ul class="actions stacked">
+								<li><a href="/" class="button large fit">Log Out</a></li>
+							</ul>
+						</section>
+					</section>
+                    
+			<!-- Main -->
+		    	<div id="main">     
+
+		    	</div>                             
+		</div>
+
+	<!-- Scripts -->
+		<script src="jquery.min.js"></script>
+		<script src="browser.min.js"></script>
+		<script src="breakpoints.min.js"></script>
+		<script src="util.js"></script>
+		<script src="main.js"></script>
+		<script src="showmore.js"></script>
+		<script src="picslideshow.js"></script>
+		<script src="alert.js"></script>
+		<script>
+			$('#myModal').on('shown.bs.modal', function () {
+	  			$('#myInput').trigger('focus')
+			})
+		</script>
+
+	</body>
+</html>
