@@ -110,6 +110,16 @@ router.get("/chatroom", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/chatroom.html`);
 });
+router.get("/public_some", async (ctx, next) => {
+    console.log("Rsponse public_some page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/public_some.html`);
+});
+router.post("/public_success", async (ctx) => {
+    console.log("Rsponse public_success page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/public_success.html`);
+});
 
 //css
 router.get("/main.css", async (ctx, next) => {
