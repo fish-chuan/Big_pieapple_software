@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Future Imperfect by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index">萍水相逢</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="activity">活動</a></li>
+								<li><a href="chatroom">聊天室</a></li>
+								<li><a href="personality">個人主頁</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="#" class="button large fit">Log out</a></li>
+								</ul>
+							</section>
+
+					</section>
+                    
+				<!-- Main -->
+					<div id="main">                                  
+						<!-- tital -->
+								<header>
+									<div class="title">
+										<h2>發佈新貼文</h2>
+									</div>
+								</header>
+	
+						<!-- Post -->
+							<article class="post">
+                                <form action="http://localhost:3001/upload" method="post" enctype="multipart/form-data">
+								<header>
+                                    <h5 class="card-title text-center">貼文名稱</h5>
+                                    <input type="text" rows="50"/><br>
+                                    <h3>新增貼文圖片</h3><br>
+									<div class="image featured">
+                                        <input type="file" name="file" onchange = "readURL(this)" targetid = "preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/><br>
+                                    </div>
+                                </header>
+                                <h3>預覽：</h3>
+                                <img class="image featured" id="preview_progressbarTW_img" src="#" /><br>
+                                <h5>貼文敘述</h5>
+                                <textarea  cols="50" rows="5" placeholder="留言..."></textarea>
+								<footer>
+									<ul class="actions">
+										<li><input type="submit" name="submit" id="submit" value="upload"/></li>
+									</ul>
+                                </footer>
+                                </form>
+							</article>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="jquery.min.js"></script>
+			<script src="browser.min.js"></script>
+			<script src="breakpoints.min.js"></script>
+			<script src="util.js"></script>
+            <script src="main.js"></script>
+            <script>
+                function readURL(input){
+                
+                  if(input.files && input.files[0]){
+
+                    let imageTagID = input.getAttribute("targetID");
+                    let reader = new FileReader();
+
+                    reader.onload = function (e) {
+
+                       var img = document.getElementById(imageTagID);
+                
+                       img.setAttribute("src", e.target.result)
+                
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                  }
+                }
+            </script>
+			
+	</body>
+</html>

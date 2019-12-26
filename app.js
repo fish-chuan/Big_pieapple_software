@@ -135,6 +135,11 @@ router.get("/public_some", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/public_some.html`);
 });
+router.get("/page_upload", async (ctx, next) => {
+    console.log("Rsponse page_upload page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/page_upload.html`);
+});
 router.post("/public_success", async (ctx) => {
     console.log("Rsponse public_success page");
     ctx.type = "html";
@@ -249,6 +254,11 @@ router.get("/icon_video.png", async (ctx, next) => {
     console.log("Rsponse icon_video.png");
     ctx.type = "png";
     ctx.body = fs.createReadStream(`${position}/static/images/icon_video.png`);
+});
+router.get("/tree.jpg", async (ctx, next) => {
+    console.log("Rsponse tree.png");
+    ctx.type = "png";
+    ctx.body = fs.createReadStream(`${position}/static/images/tree.jpg`);
 });
 
 //icon
