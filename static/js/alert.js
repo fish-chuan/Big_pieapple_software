@@ -10,6 +10,24 @@ function Giveup() {
     }
 }
 
+function Giveup_index() {
+    if (confirm("確定放棄本次申請，點擊確定(放棄申請)或取消(繼續申請)")) {
+        location.href = "index";
+    }
+}
+
+function Giveup_chat() {
+    if (confirm("確定放棄本次申請，點擊確定(放棄申請)或取消(繼續申請)")) {
+        location.href = "chatroom";
+    }
+}
+
+function Giveup_personality() {
+    if (confirm("確定放棄本次申請，點擊確定(放棄申請)或取消(繼續申請)")) {
+        location.href = "personality";
+    }
+}
+
 function Complete() {
     alert("申請完成");
     location.href = "activity_manager";
