@@ -70,7 +70,11 @@ router.get("/activity", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity.html`);
 });
-
+router.get("/activity_old", async (ctx, next) => {
+    console.log("Rsponse activity_old page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_old.html`);
+});
 router.get("/upload1", async (ctx, next) => {
     console.log("Rsponse upload page");
     ctx.type = "html";
@@ -80,6 +84,11 @@ router.get("/post_18", async (ctx, next) => {
     console.log("Rsponse post_18 page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/post_18.html`);
+});
+router.get("/chatroom", async (ctx, next) => {
+    console.log("Rsponse chatroom page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/chatroom.html`);
 });
 
 //css
