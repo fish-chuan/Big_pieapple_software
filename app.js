@@ -110,6 +110,11 @@ router.get("/activity_coming", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_coming.html`);
 });
+router.get("/activity_manager", async (ctx, next) => {
+    console.log("Rsponse activity_manager page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_manager.html`);
+});
 router.get("/activity_manager_application", async (ctx, next) => {
     console.log("Rsponse activity_manager_application page");
     ctx.type = "html";
@@ -167,7 +172,11 @@ router.get("/all.css", async (ctx, next) => {
     ctx.type = "css";
     ctx.body = fs.createReadStream(`${position}/static/css/all.css`);
 });
-
+router.get("/managerform.css", async (ctx, next) => {
+    console.log("Rsponse managerform.css");
+    ctx.type = "css";
+    ctx.body = fs.createReadStream(`${position}/static/css/managerform.css`);
+});
 
 //images
 router.get("/avatar.jpg", async (ctx, next) => {
