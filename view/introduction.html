@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <html>
 	<head>
 		<title>Future Imperfect by HTML5 UP</title>
@@ -18,7 +19,7 @@
 							<ul>
 								<li><a href="activity">活動</a></li>
 								<li><a href="chatroom">聊天室</a></li>
-								<li><a href="personality">個人主頁</a></li><!-- 先做著放 -->
+								<li><a href="personality">個人主頁</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -38,43 +39,47 @@
 									<li><a href="#" class="button large fit">Log In</a></li>
 								</ul>
 							</section>
+
 					</section>
                     
 				<!-- Main -->
 					<div id="main">                                  
 						<!-- tital -->
 								<header>
-									<div>
-										<h2>粉絲</h2>
-										<p>\( ★▽★ )/</p>
+									<div class="title">
+										<h2>個人資訊</h2>
+										<p>-( = ▽ = )-</p>
 									</div>
 								</header>
 
-						<!-- Posts List -->
-						<section>
-							<ul>
-								<li>
-									<div>
-										<a href="#" ><img src="pic09.jpg" alt=""/>&nbsp&nbsp pineapple</a>
-									</div>
-								</li>
-							</ul>
-						</section>
+						<!-- Post -->
 						
-						<!-- Pagination -->
-							<ul class="actions pagination">
-								<li><a href="#" class="button">Previous Page</a></li>
-								<li><a href="#" class="button">Next Page</a></li>
-							</ul>
-
+							<article class="post">
+								<section>
+									<form>
+										<div>
+                                            <br>
+											<div class="col-12">
+												<textarea name="demo-message" id="demo-message" placeholder="write!" rows="6"></textarea>
+											</div>
+											<div class="col-12">
+													<br>
+													<input type="button" value="Send" onclick="location.href='introduction_sucess'"/>
+													<input type="reset" value="Reset" /><!--清除-->
+											</div>
+										</div>
+									</form>
+								</section>
+							</article>
 					</div>
 
 				<!-- Sidebar -->
 					<section id="sidebar">
-
 						<!-- Intro -->
 							<section id="intro">
-								<h2>暱稱</h2>
+								<header>
+									<h2>暱稱</h2>
+								</header>
 							</section>
 
 					</section>
@@ -86,5 +91,6 @@
 			<script src="breakpoints.min.js"></script>
 			<script src="util.js"></script>
 			<script src="main.js"></script>
+
 	</body>
 </html>
