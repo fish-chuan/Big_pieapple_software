@@ -24,6 +24,7 @@ router.get('/', (ctx) => {
   // 讀取檔案
   const pathUrl = path.join(__dirname, 'view/video_push.html');
   const pathUr2 = path.join(__dirname, 'view/picture_push.html');
+  const pathUr3 = path.join(__dirname, 'view/text_push.html');
   if(pathUr2) {
     ctx.body = fs.createReadStream(pathUr2);
   }

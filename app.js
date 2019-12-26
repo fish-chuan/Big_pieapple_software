@@ -70,6 +70,11 @@ router.get("/activity", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity.html`);
 });
+router.get("/upload1", async (ctx, next) => {
+    console.log("Rsponse upload page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/upload1.html`);
+});
 
 //css
 router.get("/main.css", async (ctx, next) => {
