@@ -70,17 +70,16 @@ router.get("/activity", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity.html`);
 });
-<<<<<<< HEAD
+
 router.get("/upload1", async (ctx, next) => {
     console.log("Rsponse upload page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/upload1.html`);
-=======
+});
 router.get("/post_18", async (ctx, next) => {
     console.log("Rsponse post_18 page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/post_18.html`);
->>>>>>> 447b803d0abc14304402e6e2dbbedddd37975264
 });
 
 //css
