@@ -150,6 +150,11 @@ router.get("/activity_change", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_change.html`);
 });
+router.get("/activity_change_choice", async (ctx, next) => {
+    console.log("Rsponse activity_change_choice page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_change_choice.html`);
+});
 router.get("/activity_change_on", async (ctx, next) => {
     console.log("Rsponse activity_change_on page");
     ctx.type = "html";
