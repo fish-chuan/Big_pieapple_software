@@ -3,13 +3,16 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const Koa = require('koa');
+const Router = require('koa-router');
+const router = new Router();
 
 // 線上人數計數
 let onlineCount = 0;
 
 //推到瀏覽器上顯示
 app.get('/', (req, res) => {
-    res.sendFile( __dirname + '/Big_pieapple_software/view/chatroom.html');
+    res.sendFile( __dirname + '/view/chatroom2.html');
 });
 // 當發生連線事件
 io.on('connection', (socket) => {
@@ -37,6 +40,12 @@ io.on('connection', (socket) => {
         onlineCount = (onlineCount < 0) ? 0 : onlineCount-=1;
         io.emit("online", onlineCount);
     });
+});
+//獲取main.css
+router.get("/main.css", async (ctx, next) => {
+    console.log("Rsponse main css");
+    ctx.type = "css";
+    ctx.body = fs.createReadStream(`${position}/static/css/main.css`);
 });
 // 伺服器位置
 server.listen(3000, () => {
