@@ -140,6 +140,11 @@ router.get("/activity_login", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_login.html`);
 });
+router.get("/activity_Feedback", async (ctx, next) => {
+    console.log("Rsponse activity_Feedback page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_Feedback.html`);
+});
 router.get("/activity_add", async (ctx, next) => {
     console.log("Rsponse activity_add page");
     ctx.type = "html";
