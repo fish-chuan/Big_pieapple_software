@@ -41,7 +41,6 @@ io.on('connection', (socket) => {
         io.emit("online", onlineCount);
     });
 });
-//獲取main.css
 router.get("/main.css", async (ctx, next) => {
     console.log("Rsponse main css");
     ctx.type = "css";
