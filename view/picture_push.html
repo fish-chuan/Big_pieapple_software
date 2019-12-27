@@ -66,7 +66,7 @@
 								<footer>
 									<ul class="actions">
 										<li><input type="submit" name="submit" id="submit" value="upload"/></li>
-										<li><input type="button" value="discard"  onclick="location.href='discard_p'"/></li>
+										<li><input type="button" value="discard"  onclick="giveup(this)"/></li>
 									</ul>
                                 </footer>
                                 </form>
@@ -79,7 +79,17 @@
 			<script src="browser.min.js"></script>
 			<script src="breakpoints.min.js"></script>
 			<script src="util.js"></script>
-            <script src="main.js"></script>
+			<script src="main.js"></script>
+			<script >
+				function giveup(input) {
+					var r = confirm("是否放棄此次編輯？");
+					if (r == true) {
+    					x = location.href = "personality";
+					} else {
+    					x = "放棄";
+					}
+				}
+			</script>
             <script>
                 function readURL(input){
                 
