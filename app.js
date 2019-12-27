@@ -150,10 +150,20 @@ router.get("/activity_change", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_change.html`);
 });
+router.get("/activity_change_on", async (ctx, next) => {
+    console.log("Rsponse activity_change_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_change_on.html`);
+});
 router.get("/activity_delete", async (ctx, next) => {
     console.log("Rsponse activity_delete page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_delete.html`);
+});
+router.get("/activity_delete_on", async (ctx, next) => {
+    console.log("Rsponse activity_delete_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_delete_on.html`);
 });
 router.get("/activity_manager_application", async (ctx, next) => {
     console.log("Rsponse activity_manager_application page");

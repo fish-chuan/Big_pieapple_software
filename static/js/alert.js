@@ -41,7 +41,7 @@ function ok() {
 
 function ok_login() {
     alert("系統偵測是管理員，請點擊確定(進入活動管理)");
-    location.href = "activity_add_on";
+    location.href = "activity_delete_on";
 }
 
 function Complete() {
@@ -52,4 +52,14 @@ function Complete() {
 function Complete_add() {
     alert("新增完成");
     location.href = "activity_add_on";
+}
+
+function Complete_change() {
+    alert("新增完成");
+    location.href = "activity_change_on";
+}
+
+function Complete_delete() {
+    alert("新增完成");
+    location.href = "activity_delete_on";
 }
