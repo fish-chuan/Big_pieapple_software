@@ -6,6 +6,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="main.css" />
+		<script>
+            function discard(){
+                window.history.back(-1);
+            }
+        </script>
 	</head>
 	<body class="is-preload">
 
@@ -53,7 +58,7 @@
 	
 						<!-- Post -->
 							<article class="post">
-                                <form action="http://localhost:3001/upload" method="post" enctype="multipart/form-data">
+                                <form action="public_success" method="post" enctype="multipart/form-data">
 								<header>
                                     <h5 class="card-title text-center">貼文名稱</h5>
                                     <input type="text" rows="50"/><br>
@@ -69,6 +74,7 @@
 								<footer>
 									<ul class="actions">
 										<li><input type="submit" name="submit" id="submit" value="upload"/></li>
+										<li><input type="button" id="press" onclick="discard()" value="取消"/></li>
 									</ul>
                                 </footer>
                                 </form>
