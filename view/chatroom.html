@@ -16,7 +16,7 @@
         var socket = io();
     </script>
 
-    <!--聊天室框架-->>
+    <!--聊天室框架-->
     <style>
         html, body {
             padding: 0;
@@ -52,7 +52,7 @@
         #send-box input {
             display: inline-block;
         }
-
+       
         #send-box input.error {
             border: 1px solid red;
         }
@@ -187,11 +187,12 @@
                         //聊天內容輸入
                         sendForm.addEventListener("submit", function (e) {
                             e.preventDefault();
-            
+
+                        
                             var ok = true;
                             var formData = {};
                             var formChild = sendForm.children;
-            
+                            //檢查輸入是否為0
                             for (var i=0; i< sendForm.childElementCount; i++) {
                                 var child = formChild[i];
                                 if (child.name !== "") {
@@ -206,7 +207,7 @@
                                 }
                             }
             
-                            if (ok) socket.emit("send", formData);
+                            if (ok) socket.emit("send", formData);//不為0則輸出
                         });
             
             

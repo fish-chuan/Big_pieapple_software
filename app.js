@@ -105,15 +105,30 @@ router.get("/activity_old", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_old.html`);
 });
+router.get("/activity_old_on", async (ctx, next) => {
+    console.log("Rsponse activity_old_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_old_on.html`);
+});
 router.get("/activity_coming", async (ctx, next) => {
     console.log("Rsponse activity_coming page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_coming.html`);
 });
+router.get("/activity_coming_on", async (ctx, next) => {
+    console.log("Rsponse activity_coming_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_coming_on.html`);
+});
 router.get("/activity_manager", async (ctx, next) => {
     console.log("Rsponse activity_manager page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_manager.html`);
+});
+router.get("/activity_manager_on", async (ctx, next) => {
+    console.log("Rsponse activity_manager_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_manager_on.html`);
 });
 router.get("/activity_login", async (ctx, next) => {
     console.log("Rsponse activity_login page");
@@ -125,15 +140,35 @@ router.get("/activity_add", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_add.html`);
 });
+router.get("/activity_add_on", async (ctx, next) => {
+    console.log("Rsponse activity_add_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_add_on.html`);
+});
 router.get("/activity_change", async (ctx, next) => {
     console.log("Rsponse activity_change page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_change.html`);
 });
+router.get("/activity_change_choice", async (ctx, next) => {
+    console.log("Rsponse activity_change_choice page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_change_choice.html`);
+});
+router.get("/activity_change_on", async (ctx, next) => {
+    console.log("Rsponse activity_change_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_change_on.html`);
+});
 router.get("/activity_delete", async (ctx, next) => {
     console.log("Rsponse activity_delete page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_delete.html`);
+});
+router.get("/activity_delete_on", async (ctx, next) => {
+    console.log("Rsponse activity_delete_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_delete_on.html`);
 });
 router.get("/activity_manager_application", async (ctx, next) => {
     console.log("Rsponse activity_manager_application page");
@@ -289,6 +324,21 @@ router.get("/tree.jpg", async (ctx, next) => {
     ctx.type = "png";
     ctx.body = fs.createReadStream(`${position}/static/images/tree.jpg`);
 });
+router.get("/person1.jpg", async (ctx, next) => {
+    console.log("Rsponse person1.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/person1.jpg`);
+});
+router.get("/person2.jpg", async (ctx, next) => {
+    console.log("Rsponse person2.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/person2.jpg`);
+});
+router.get("/person3.jpg", async (ctx, next) => {
+    console.log("Rsponse person3.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/person3.jpg`);
+});
 
 //icon
 router.get("/fa-brands-400.eot", async (ctx, next) => {
@@ -364,10 +414,10 @@ router.get("/showmore.js", async (ctx, next) => {
     ctx.type = "js";
     ctx.body = fs.createReadStream(`${position}/static/js/showmore.js`);
 });
-router.get("/picslideshow.js", async (ctx, next) => {
-    console.log("Rsponse picslideshow.js");
+router.get("/activity_m.js", async (ctx, next) => {
+    console.log("Rsponse activity_m.js");
     ctx.type = "js";
-    ctx.body = fs.createReadStream(`${position}/static/js/picslideshow.js`);
+    ctx.body = fs.createReadStream(`${position}/static/js/activity_m.js`);
 });
 router.get("/alert.js", async (ctx, next) => {
     console.log("Rsponse alert.js");
