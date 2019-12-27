@@ -324,6 +324,21 @@ router.get("/tree.jpg", async (ctx, next) => {
     ctx.type = "png";
     ctx.body = fs.createReadStream(`${position}/static/images/tree.jpg`);
 });
+router.get("/person1.jpg", async (ctx, next) => {
+    console.log("Rsponse person1.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/person1.jpg`);
+});
+router.get("/person2.jpg", async (ctx, next) => {
+    console.log("Rsponse person2.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/person2.jpg`);
+});
+router.get("/person3.jpg", async (ctx, next) => {
+    console.log("Rsponse person3.jpg");
+    ctx.type = "jpg";
+    ctx.body = fs.createReadStream(`${position}/static/images/person3.jpg`);
+});
 
 //icon
 router.get("/fa-brands-400.eot", async (ctx, next) => {

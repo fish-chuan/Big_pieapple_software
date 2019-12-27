@@ -56,10 +56,10 @@
 								</header>
 					</div>
 
-				<!-- Sidebar -->
+				<!-- 左邊的 -->
 					<section id="sidebar">
 
-						<!-- Intro -->
+						<!-- 名字 -->
 							<section id="intro">
 								<header>
 									<h2>暱稱</h2>
@@ -67,18 +67,19 @@
 							</section>
 
 						<!-- About -->
-                        <section class="blurb">
-                            <h2>About Me</h2>
+                        <section>
+							<h2>About Me</h2>
+							<textarea style="background-color:rgba(255, 240, 212, 0); border:rgba(255, 240, 212, 0) solid;" placeholder="..." rows="3"></textarea>
 							<a href="introduction">修改個人資訊</a>
 						</section>
 
-						<!-- Posts List -->
+						<!-- 功能 -->
 							<section>
-								<ul class="posts">
+								<ul>
 									<li>
 										<article>
 											<header>
-												<h2><a href=" " class="button fit" data-toggle="modal" data-target="#exampleModalCenter">發表</a></h2>
+												<h2><a href=" " class="button fit" data-toggle="modal" data-target="#ModalCenter">發表</a></h2>
 											</header>
 										</article>
 									</li>
@@ -97,20 +98,15 @@
 			</div>
 
 			<!-- Modal 動態視窗-->
-  			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"><!--fade 淡入淡出-->
+  			<div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog"><!--fade:淡入淡出-->
     			<div class="modal-dialog modal-dialog-centered" role="document"><!--.modal-dialog-centered 到 .modal-dialog 來使互動視窗垂直置中-->
      			 <div class="modal-content">
-       			 	<div class="modal-header">
-        			 
-        			</div>
         			<div class="modal-body">
 						<a href="picture_push"><img style="padding:0px 25px;" src="icon_photo.png"/>圖片</a>
 						<a href="text_push"><img style="padding:0px 25px;" src="icon_text.png"/>文字</a>
 						<a href="video_push"><img style="padding:0px 25px;" src="icon_video.png"/>影音</a>
         			</div>
-        			<div class="modal-footer">
-         			 <button type="button" class="button small" data-dismiss="modal">Close</button>
-        			</div>
+
       			</div>
     			</div>
   			</div>
