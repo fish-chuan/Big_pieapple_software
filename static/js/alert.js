@@ -10,7 +10,7 @@ function Giveup() {
     }
 }
 
-function Giveup_add() {
+function Giveup_all() {
     if (confirm("確定放棄本次申請，點擊確定(放棄申請)或取消(繼續申請)")) {
         location.href = "activity_manager";
     }
@@ -32,6 +32,16 @@ function Giveup_personality() {
     if (confirm("確定放棄本次申請，點擊確定(放棄申請)或取消(繼續申請)")) {
         location.href = "personality";
     }
+}
+
+function ok() {
+    alert("系統偵測是管理員，請點擊確定(進入活動管理)");
+    location.href = "activity_manager";
+}
+
+function ok_login() {
+    alert("系統偵測是管理員，請點擊確定(進入活動管理)");
+    location.href = "activity_add_on";
 }
 
 function Complete() {
