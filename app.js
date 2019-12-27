@@ -40,6 +40,11 @@ router.get("/index", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/index.html`);
 });
+router.get("/chatroom", async (ctx, next) => {
+    console.log("Rsponse chatroom");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/chatroom.html`);
+});
 router.get("/personality", async (ctx, next) => {
     console.log("Rsponse personality page");
     ctx.type = "html";
