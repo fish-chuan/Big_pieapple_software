@@ -28,6 +28,18 @@ function Giveup_change_choice() {
     }
 }
 
+function Giveup_Feedback_choice() {
+    if (confirm("確定放棄選擇，點擊確定(返回管理頁面)或取消(繼續選擇)")) {
+        location.href = "activity_delete_on";
+    }
+}
+
+function Giveup_Feedback_choice() {
+    if (confirm("確定放棄處理此回饋，點擊確定(返回管理頁面)或取消(繼續選擇)")) {
+        location.href = "activity_delete_on";
+    }
+}
+
 function Giveup_delete() {
     if (confirm("確定放棄刪除活動，點擊確定(返回管理頁面)或取消(繼續選擇)")) {
         location.href = "activity_change_on";
@@ -84,5 +96,15 @@ function Complete_change_choice() {
 
 function Complete_delete() {
     alert("刪除完成");
+    location.href = "activity_delete_on";
+}
+
+function Complete_Feedback_Choice() {
+    alert("活動回饋已選擇");
+    location.href = "activity_Feedback_A";
+}
+
+function Complete_Feedback() {
+    alert("回饋單完成");
     location.href = "activity_delete_on";
 }

@@ -8,7 +8,11 @@
 	<link rel="stylesheet" href="managerform.css" type="text/css" />
 </head>
 <body class="is-preload">
+
+	<!-- Wrapper -->
 		<div id="wrapper">
+
+			<!-- Header -->
 				<header id="header">
 					<h1><a href="index">萍水相逢</a></h1>
 					<nav class="links">
@@ -43,19 +47,22 @@
 					<article class="post">
 						<form>
 							<div class="title">
-								<h1>點選活動回饋</h1>
+								<h1>活動回饋</h1>
 							    <hr>
-									<a type="button" class="button fit">【2020台中跨年】跨年晚會-太平區</a>
-									<p><br></p>
-									<a type="button" class="button fit">五月天 Mayday 2020-跨年場</a>
-									<p><br></p>
-									<a type="button" class="button fit">台灣燈會2020「璀璨台中」2019台中耶誕夢想世界</a>
-									<p><br></p>
-									<a type="button" class="button fit">2019台中耶誕夢想世界</a>
-									<p><br></p>
-								<ul class="actions fit">	
-									<li><a type="button" onclick="Giveup_Feedback_Choice()" class="button fit">返回</a></li>
-									<li><a type="button" onclick="Complete_Feedback_Choice()" class="button fit">完成</a></li>
+							    <label><b>活動名稱</b></label>
+							    <input value="【2020台中跨年】跨年晚會-太平區">
+							    <label><b>郵件</b></label>
+							    <input type="text" placeholder="Enter Email">
+							    <label><b>手機號碼</b></label>
+								<input type="text" placeholder="Enter Mobile Phone">
+							    <label><b>需改進的地方</b></label>
+								<input type="text" placeholder="Enter Tell Us">	
+								<label><b>想說的話</b></label>
+								<input type="text" placeholder="Enter Comment">
+								<br><br>
+								<ul class="actions fit">
+									<li><a type="button" onclick="Giveup_Feedback()" class="button fit">返回</a></li>
+									<li><a type="button" onclick="Complete_Feedback()" class="button fit">完成</a></li>
 								</ul>
 							</div>
 						  </form>

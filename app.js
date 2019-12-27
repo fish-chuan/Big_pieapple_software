@@ -145,6 +145,11 @@ router.get("/activity_Feedback", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_Feedback.html`);
 });
+router.get("/activity_Feedback_A", async (ctx, next) => {
+    console.log("Rsponse activity_Feedback_A page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_Feedback_A.html`);
+});
 router.get("/activity_add", async (ctx, next) => {
     console.log("Rsponse activity_add page");
     ctx.type = "html";
