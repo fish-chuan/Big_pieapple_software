@@ -4,14 +4,14 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-// 加入線上人數計數
+// 線上人數計數
 let onlineCount = 0;
 
 //推到瀏覽器上顯示
 app.get('/', (req, res) => {
-    res.sendFile( __dirname + '/view/chatroom.html');
+    res.sendFile( __dirname + '/Big_pieapple_software/view/chatroom.html');
 });
-// 當觸發連線事件
+// 當發生連線事件
 io.on('connection', (socket) => {
     // 有連線發生時增加人數
     onlineCount++;
@@ -22,10 +22,10 @@ io.on('connection', (socket) => {
     socket.on("greet", () => {
         socket.emit("greet", onlineCount);
     });
-
+    //接收來自網頁端的訊息
     socket.on("send", (msg) => {
-        // 如果 msg 內容鍵值小於 2 等於是訊息傳送不完全
-        // 因此我們直接 return ，終止函式執行。
+        
+        // 如果 msg 內容鍵值小於 2,直接return 
         if (Object.keys(msg).length < 2) return;
 
         // 廣播訊息到聊天室
