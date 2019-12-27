@@ -182,10 +182,10 @@ router.get("/fontawesome-all-min.css", async (ctx, next) => {
     ctx.type = "css";
     ctx.body = fs.createReadStream(`${position}/static/css/fontawesome-all-min.css`);
 });
-router.get("/login_table.css", async (ctx, next) => {
-    console.log("Rsponse login_table.css");
+router.get("/right_side.css", async (ctx, next) => {
+    console.log("Rsponse right_side.css");
     ctx.type = "css";
-    ctx.body = fs.createReadStream(`${position}/static/css/login_table.css`);
+    ctx.body = fs.createReadStream(`${position}/static/css/bar_right_side.css`);
 });
 router.get("/all.css", async (ctx, next) => {
     console.log("Rsponse all.css");
