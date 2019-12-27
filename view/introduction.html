@@ -65,7 +65,7 @@
 											<div class="col-12">
 													<br>
 													<input type="button" value="Send" onclick="location.href='introduction_sucess'"/>
-													<input type="button" value="discard" onclick="location.href='discard'"/>
+													<input type="button" value="discard" onclick="giveup(this)"/>
 													<input type="reset" value="Reset" /><!--清除-->
 											</div>
 										</div>
@@ -92,6 +92,18 @@
 			<script src="breakpoints.min.js"></script>
 			<script src="util.js"></script>
 			<script src="main.js"></script>
+			<script >
+				function giveup(input) {
+					var r = confirm("是否放棄此次編輯？");
+					if (r == true) {
+    					x = location.href = "personality";
+					} else {
+    					x = "放棄";
+					}
+				}
+				
+			</script>
+
 
 	</body>
 </html>
