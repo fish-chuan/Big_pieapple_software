@@ -185,11 +185,7 @@ router.get("/post_18", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/post_18.html`);
 });
-router.get("/chatroom", async (ctx, next) => {
-    console.log("Rsponse chatroom page");
-    ctx.type = "html";
-    ctx.body = fs.createReadStream(`${position}/view/chatroom.html`);
-});
+
 router.get("/public_some", async (ctx, next) => {
     console.log("Rsponse public_some page");
     ctx.type = "html";
@@ -424,11 +420,7 @@ router.get("/alert.js", async (ctx, next) => {
     ctx.type = "js";
     ctx.body = fs.createReadStream(`${position}/static/js/alert.js`);
 });
-router.get("/chat.js", async (ctx, next) => {
-    console.log("Rsponse chat.js");
-    ctx.type = "js";
-    ctx.body = fs.createReadStream(`${position}/static/js/chat.js`);
-});
+
 
 // 静態資源
 /*app.use(convert(koaStatic(
