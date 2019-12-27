@@ -105,15 +105,30 @@ router.get("/activity_old", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_old.html`);
 });
+router.get("/activity_old_on", async (ctx, next) => {
+    console.log("Rsponse activity_old_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_old_on.html`);
+});
 router.get("/activity_coming", async (ctx, next) => {
     console.log("Rsponse activity_coming page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_coming.html`);
 });
+router.get("/activity_coming_on", async (ctx, next) => {
+    console.log("Rsponse activity_coming_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_coming_on.html`);
+});
 router.get("/activity_manager", async (ctx, next) => {
     console.log("Rsponse activity_manager page");
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_manager.html`);
+});
+router.get("/activity_manager_on", async (ctx, next) => {
+    console.log("Rsponse activity_manager_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_manager_on.html`);
 });
 router.get("/activity_login", async (ctx, next) => {
     console.log("Rsponse activity_login page");

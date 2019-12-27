@@ -40,6 +40,6 @@ function Complete() {
 }
 
 function Complete_add() {
-    alert("申請完成");
+    alert("新增完成");
     location.href = "activity_add_on";
 }
