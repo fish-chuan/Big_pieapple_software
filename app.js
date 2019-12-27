@@ -125,6 +125,11 @@ router.get("/activity_add", async (ctx, next) => {
     ctx.type = "html";
     ctx.body = fs.createReadStream(`${position}/view/activity_add.html`);
 });
+router.get("/activity_add_on", async (ctx, next) => {
+    console.log("Rsponse activity_add_on page");
+    ctx.type = "html";
+    ctx.body = fs.createReadStream(`${position}/view/activity_add_on.html`);
+});
 router.get("/activity_change", async (ctx, next) => {
     console.log("Rsponse activity_change page");
     ctx.type = "html";
@@ -364,10 +369,10 @@ router.get("/showmore.js", async (ctx, next) => {
     ctx.type = "js";
     ctx.body = fs.createReadStream(`${position}/static/js/showmore.js`);
 });
-router.get("/picslideshow.js", async (ctx, next) => {
-    console.log("Rsponse picslideshow.js");
+router.get("/activity_m.js", async (ctx, next) => {
+    console.log("Rsponse activity_m.js");
     ctx.type = "js";
-    ctx.body = fs.createReadStream(`${position}/static/js/picslideshow.js`);
+    ctx.body = fs.createReadStream(`${position}/static/js/activity_m.js`);
 });
 router.get("/alert.js", async (ctx, next) => {
     console.log("Rsponse alert.js");
